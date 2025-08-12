@@ -1,13 +1,40 @@
-# Tutorial Passo a Passo: Site da Cafeteria StarCafé
+# **Tutorial Passo a Passo — Navbar do Site da Cafeteria StarCafé**
 
-Vamos criar um site simples para uma cafeteria inspirada no estilo da Starbucks. Este tutorial abrange desde a estrutura HTML básica até a estilização com CSS e interatividade com JavaScript.
+Este é o **primeiro passo** para criar o site da Cafeteria StarCafé, inspirado no estilo visual da Starbucks.
+Aqui vamos criar a **estrutura HTML inicial**, implementar a **navbar** e definir a **base do CSS**.
 
 ## Mockup
 
 ![Mockup do site da Cafeteria StarCafé](img/mockup.png)
+
 ---
 
-## 1. Estrutura Básica HTML
+## **1. Visão Geral**
+
+No final desta parte, teremos:
+
+* Um documento HTML estruturado.
+* Uma barra de navegação fixa no topo (navbar).
+* Um cabeçalho com imagem de fundo.
+* Estilos básicos aplicados.
+
+---
+
+Entendi — vou dividir a **estrutura HTML** em fragmentos menores e explicar passo a passo.
+Assim, cada parte fica isolada e fácil de entender antes de avançar.
+
+---
+
+# **Tutorial Passo a Passo — Navbar do Site da Cafeteria StarCafé**
+
+Este é o **primeiro passo** para criar o site da Cafeteria StarCafé, inspirado no estilo visual da Starbucks.
+Vamos montar a **estrutura HTML** e iniciar os **estilos CSS**.
+
+---
+
+## **1. Estrutura HTML Base**
+
+Começamos com o **esqueleto do documento HTML**:
 
 ```html
 <!DOCTYPE html>
@@ -20,21 +47,25 @@ Vamos criar um site simples para uma cafeteria inspirada no estilo da Starbucks.
     <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/coffee-163/128/Hot_green_Coffee-512.png" type="image/png" />
 </head>
 <body>
-    <!-- Conteúdo do site aqui -->
+    <!-- Aqui entra o conteúdo -->
 </body>
 </html>
 ```
 
-* O `<!DOCTYPE html>` indica que este é um documento HTML5.
-* O `<html lang="pt-BR">` define que o conteúdo está em português do Brasil.
-* `<meta charset="UTF-8" />` define a codificação de caracteres para suportar acentuação.
-* `<meta name="viewport" ...>` garante que o site seja responsivo em dispositivos móveis.
-* `<title>` define o título da aba no navegador.
-* `<link rel="icon">` adiciona um ícone na aba.
+**O que está acontecendo aqui:**
+
+* `<!DOCTYPE html>` → indica HTML5.
+* `<html lang="pt-BR">` → define o idioma.
+* `<meta charset="UTF-8">` → suporte a acentos.
+* `<meta name="viewport">` → responsividade.
+* `<title>` → título na aba.
+* `<link rel="icon">` → ícone da aba.
 
 ---
 
-## 2. Navegação (Navbar)
+## **2. Navbar (Barra de Navegação)**
+
+A **navbar** será fixa no topo e terá o logotipo e os links principais.
 
 ```html
 <nav id="navbar">
@@ -48,13 +79,15 @@ Vamos criar um site simples para uma cafeteria inspirada no estilo da Starbucks.
 </nav>
 ```
 
-* A `<nav>` cria a barra de navegação fixa no topo.
-* `.logo` é o nome do site.
-* A lista `<ul>` contém links para seções da página, facilitando a navegação interna.
+**Notas:**
+
+* `<nav>` → área de navegação.
+* `.logo` → nome da marca.
+* `<ul>` → lista de links para seções internas.
 
 ---
 
-## 3. Cabeçalho com Imagem e Título (Header)
+O **header** terá uma imagem de fundo e um título.
 
 ```html
 <header>
@@ -62,15 +95,19 @@ Vamos criar um site simples para uma cafeteria inspirada no estilo da Starbucks.
 </header>
 ```
 
-* O `<header>` tem uma imagem de fundo (definida no CSS) e o título principal do site.
+**Notas:**
+
+* `<header>` → bloco principal de destaque do site.
+* `<h1>` → título principal que será exibido sobre a imagem de fundo.
 
 ---
 
-## 7. Estilização (CSS)
+## **3. Estilos CSS Base**
 
-### Reset e base
+Começamos com um **reset CSS** e definimos fonte, cores e layout básico.
 
 ```css
+/* Reset e base */
 * {
     margin: 0;
     padding: 0;
@@ -85,14 +122,12 @@ body {
 }
 ```
 
-* Remove margens e espaçamentos padrões.
-* Define fonte e cores base.
-
 ---
 
-### Navbar
+## **4. Estilos da Navbar**
 
 ```css
+/* Navbar */
 nav {
     position: fixed;
     top: 0;
@@ -108,7 +143,7 @@ nav {
 }
 
 nav.scrolled {
-    background: #006241;
+    background: #006241; /* verde Starbucks */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -136,16 +171,21 @@ nav ul li a:hover {
 }
 ```
 
-* Navbar fixa no topo da página.
-* Começa transparente e ganha cor e sombra ao rolar a página (classe `.scrolled`).
-* Links com espaçamento e efeito de hover.
+**O que acontece aqui:**
 
-## Header
+* Navbar **fixa** no topo (`position: fixed`).
+* Começa **transparente** e muda para verde com sombra ao rolar a página (classe `.scrolled`).
+* Menu horizontal com espaçamento (`gap`).
+
+---
+
+## **5. Estilos do Cabeçalho**
 
 ```css
-/* Header */
+/* Cabeçalho */
 header {
-    background: url('https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0') no-repeat center center/cover;
+    background: url('https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0') 
+    no-repeat center center/cover;
     height: 70vh;
     display: flex;
     justify-content: center;
@@ -153,7 +193,7 @@ header {
     color: white;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
     padding: 0 16px;
-    padding-top: 60px;
+    padding-top: 60px; /* compensa altura da navbar */
     text-align: center;
 }
 
@@ -164,3 +204,11 @@ header h1 {
     animation: fadeInDown 1.5s ease forwards;
 }
 ```
+
+---
+
+## **6. Próximo Passo**
+
+Na **segunda parte** do tutorial, vamos:
+
+* Adicionar seções para cada categoria de café.
