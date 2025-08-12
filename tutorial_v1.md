@@ -4,7 +4,7 @@ Vamos criar um site simples para uma cafeteria inspirada no estilo da Starbucks.
 
 ## Mockup
 
-![Mockup do site da Cafeteria StarCafé](mockup.png)
+![Mockup do site da Cafeteria StarCafé](img/mockup.png)
 ---
 
 ## 1. Estrutura Básica HTML
