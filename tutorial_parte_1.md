@@ -18,6 +18,13 @@ No final desta parte, teremos:
 * Um cabeçalho com imagem de fundo.
 * Estilos básicos aplicados.
 
+---
+
+Entendi — vou dividir a **estrutura HTML** em fragmentos menores e explicar passo a passo.
+Assim, cada parte fica isolada e fácil de entender antes de avançar.
+
+---
+
 # **Tutorial Passo a Passo — Navbar do Site da Cafeteria StarCafé**
 
 Este é o **primeiro passo** para criar o site da Cafeteria StarCafé, inspirado no estilo visual da Starbucks.
